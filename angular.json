@@ -24,9 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularCrud"
+    }
+  },
+  "defaultProject": "AngularCrud",
+  "cli": {
+    "analytics": "639f0815-396c-4336-aa94-47efd5ec2eac"
+  }
 }

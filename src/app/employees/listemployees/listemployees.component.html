@@ -1,0 +1,81 @@
+
+<div class="container">
+  <div class="row">
+      <div class="panel panel-primary" *ngFor="let item of employees">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                {{item.name}}
+            </h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-10">
+              <div class="row vertical-align">
+                <div class="col-xs-4">
+                  <img class="image-class img-responsive" [src]="item.photopath" />
+                </div>
+                <div class="col-xs-8">
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Gender
+                    </div>
+                    <div class="col-xs-6">
+                      : {{item.gender}}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      ContactPreference
+                    </div>
+                    <div class="col-xs-6">
+                      : {{item.contactpreference}}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Email
+                    </div>
+                    <div class="col-xs-6">
+                      : {{item.email}}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Phone
+                    </div>
+                    <div class="col-xs-6">
+                      : {{item.phonenumber}}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Date of birth
+                    </div>
+                    <div class="col-xs-6">
+                      : {{item.dateofbirth | date}}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Department
+                    </div>
+                    <div class="col-xs-6">
+                      : {{item.department}}
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      isactive
+                    </div>
+                    <div class="col-xs-6">
+                      : {{item.isactive}}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
