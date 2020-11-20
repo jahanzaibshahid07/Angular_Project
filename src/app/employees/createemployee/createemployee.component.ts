@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Department } from 'src/app/models/department.model';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker'
 
 @Component({
   selector: 'app-createemployee',
@@ -15,6 +17,7 @@ export class CreateemployeeComponent implements OnInit {
   contactpreference = "";
   gender:any = "";
   isactive:boolean = false;
+  dob : any = "";
   department: string = "";
   departments: Department[] = [
     {id : 1 , name : 'HR'},
@@ -24,11 +27,26 @@ export class CreateemployeeComponent implements OnInit {
     {id : 5 , name : 'DATABASE'}
   ]
 
-  constructor() { }
+  photopath:any = "";
+  previewphoto:boolean = false;
+
+  datebsconfig : Partial<BsDatepickerConfig>;
+
+  constructor() {
+    this.datebsconfig = Object.assign({}, {
+      containerClass: 'theme-dark-blue',
+      showWeekNumbers: false,
+      dateInputFormat: 'DD/MM/YYYY'
+    });
+   }
 
   ngOnInit(): void {
   }
 
+  ontogglepreview()
+  {
+      return this.previewphoto = ! this.previewphoto;
+  }
 
   saveEmployee(employee : NgForm): void
   {
